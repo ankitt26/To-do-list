@@ -9,7 +9,9 @@ const arr = [
 
 const ul = document.querySelector('.list-ul');
 
-arr.forEach((value) => {
+const sortIndex = arr.sort((a, b) => a.index - b.index);
+
+sortIndex.forEach((value) => {
   const li = document.createElement('li');
   li.className = 'list-li';
   li.id = value.index;
