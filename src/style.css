@@ -1,3 +1,74 @@
-body {
-  background-color: rgb(11, 57, 41);
+@import url("https://fonts.googleapis.com/css2?family=Ysabeau:wght@300&display=swap");
+
+.todo-list {
+  border: 2px solid rgb(189, 184, 184);
+  border-radius: 5px;
+  box-shadow:
+    0 -28px 20px -20px rgba(0, 0, 0, 0.45),
+    25px 0 20px -20px rgba(0, 0, 0, 0.45),
+    0 25px 20px -20px rgba(0, 0, 0, 0.45),
+    -25px 0 20px -20px rgba(0, 0, 0, 0.45);
+  margin: 100px auto;
+  max-width: 600px;
+  font-family: "Ysabeau", sans-serif;
+}
+
+.list-div {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 2px 20px;
+}
+
+.list-ul {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 0;
+  margin-bottom: 0;
+}
+
+.list-li {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 20px;
+  font-size: 20px;
+  border-bottom: 1px solid rgb(163, 191, 191);
+}
+
+.description {
+  font-size: 25px;
+  font-weight: 500;
+  width: 450px;
+}
+
+h3 {
+  color: rgb(163, 191, 191);
+  font-size: 20px;
+  font-weight: 700;
+}
+
+.clear {
+  font-size: 23px;
+  font-weight: 800;
+  background-color: beige;
+  text-align: center;
+  margin: 0 1px;
+  padding-top: 10px;
+  height: 45px;
+}
+
+.input-add {
+  border: none;
+  font-style: italic;
+  font-size: 16px;
+  height: 50px;
+  width: 450px;
+}
+
+i {
+  color: rgb(163, 191, 191);
 }
