@@ -1,25 +1,17 @@
-// import _ from 'lodash';
 import './style.css';
+import addlist from './modules/addlist.js';
+import render from './modules/render.js';
+import removelist from './modules/removelist.js';
+import clearall from './modules/clearall.js';
 
-const arr = [
-  { description: 'wash the dishes', completed: true, index: 0 },
-  { description: 'complete To Do list project', completed: true, index: 1 },
-  { description: 'Attend standup meeting', completed: true, index: 2 },
-];
+let tasklist;
+if (localStorage.getItem('tasklist')) {
+  tasklist = JSON.parse(localStorage.getItem('tasklist'));
+} else {
+  tasklist = [];
+}
 
-const ul = document.querySelector('.list-ul');
-
-const sortIndex = arr.sort((a, b) => a.index - b.index);
-
-sortIndex.forEach((value) => {
-  const li = document.createElement('li');
-  li.className = 'list-li';
-  li.id = value.index;
-
-  li.innerHTML = `<label for="list" class="description" > <input type="checkbox" name="listCheckbox" value="${value.completed}">
-${value.description} </label>
-  <i class="fa fa-ellipsis-v" aria-hidden="true"></i>
-`;
-
-  ul.append(li);
-});
+render(tasklist);
+addlist(tasklist);
+removelist(tasklist);
+clearall();
