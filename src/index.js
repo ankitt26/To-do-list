@@ -4,7 +4,7 @@ import removelist from '../modules/removelist.js';
 import render from '../modules/render.js';
 import clearall from '../modules/clearall.js';
 import edit from '../modules/edit.js';
-import completelist from '../modules/completelist.js';
+import { checkCompleted, updateCheck } from '../modules/completelist.js';
 
 let tasklist;
 if (localStorage.getItem('tasklist')) {
@@ -18,4 +18,10 @@ removelist(tasklist);
 render(tasklist);
 clearall(tasklist);
 edit(tasklist);
-completelist(tasklist);
+checkCompleted(tasklist);
+updateCheck(tasklist);
+
+const refresh = document.querySelector('.fa-arrows-rotate');
+refresh.addEventListener('click', () => {
+  window.location.reload();
+});

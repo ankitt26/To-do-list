@@ -1,3 +1,4 @@
+import { checkCompleted } from './completelist.js';
 import render from './render.js';
 
 export default (tasklist) => {
@@ -20,6 +21,7 @@ export default (tasklist) => {
       const toString = JSON.stringify(tasklist);
       localStorage.setItem('tasklist', toString);
       render(tasklist);
+      checkCompleted(tasklist);
     }
   });
 };

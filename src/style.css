@@ -3,8 +3,10 @@
 .todo-list {
   border: 2px solid rgb(189, 184, 184);
   border-radius: 5px;
-  box-shadow: 0 -28px 20px -20px rgba(0, 0, 0, 0.45),
-    25px 0 20px -20px rgba(0, 0, 0, 0.45), 0 25px 20px -20px rgba(0, 0, 0, 0.45),
+  box-shadow:
+    0 -28px 20px -20px rgba(0, 0, 0, 0.45),
+    25px 0 20px -20px rgba(0, 0, 0, 0.45),
+    0 25px 20px -20px rgba(0, 0, 0, 0.45),
     -25px 0 20px -20px rgba(0, 0, 0, 0.45);
   margin: 100px auto;
   max-width: 600px;
@@ -55,6 +57,11 @@ h3 {
   height: 25px;
 }
 
+.checked {
+  text-decoration: line-through;
+  text-decoration-color: red;
+}
+
 .clear {
   font-size: 23px;
   font-weight: 800;
@@ -75,4 +82,9 @@ h3 {
 
 i {
   color: rgb(163, 191, 191);
+}
+
+.done {
+  background-color: red;
+  font-size: 40px;
 }
