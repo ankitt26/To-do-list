@@ -8,9 +8,9 @@ export default (tasklist) => {
     li.className = 'list-li';
     li.id = value.index;
 
-    li.innerHTML = `<label for="list" id="${value.index}" class="description"> <input type="checkbox" name="listCheckbox" value="${value.completed}">
-${value.description} </label>
-  <i class="fa fa-ellipsis-v" id="${value.index}" aria-hidden="true"></i>
+    li.innerHTML = `<input type="checkbox" class="checkbok" name="listCheckbox" value="${value.completed}">
+  <p class="description" id="${value.index}"> ${value.description} </p>
+  <i class="fa fa-solid fa-trash" id="${value.index}" aria-hidden="true"></i>
 `;
     ul.append(li);
   });

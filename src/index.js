@@ -1,8 +1,9 @@
 import './style.css';
-import addlist from './modules/addlist.js';
-import render from './modules/render.js';
-import removelist from './modules/removelist.js';
-import clearall from './modules/clearall.js';
+import addlist from '../modules/addlist.js';
+import removelist from '../modules/removelist.js';
+import render from '../modules/render.js';
+import clearall from '../modules/clearall.js';
+import edit from '../modules/edit.js';
 
 let tasklist;
 if (localStorage.getItem('tasklist')) {
@@ -11,7 +12,8 @@ if (localStorage.getItem('tasklist')) {
   tasklist = [];
 }
 
-render(tasklist);
 addlist(tasklist);
 removelist(tasklist);
-clearall();
+render(tasklist);
+clearall(tasklist);
+edit(tasklist);
