@@ -14,23 +14,25 @@
     />
   <script defer src="runtime.bundle.js"></script><script defer src="main.bundle.js"></script></head>
   <body>
-    <div class="todo-list">
+    <section class="todo-list">
       <div class="list-div">
-        <h3>Today To Do</h3>
+        <h3>Today's To Do</h3>
         <i class="fa-solid fa-arrows-rotate"></i>
       </div>
 
-      <div class="list-div">
+      <form class="list-div form">
         <input
           type="text"
+          id="addList"
           class="input-add"
           placeholder=" Add to your list..."
+          required
         />
         <i class="fas fa-rotate-90 enter-btn">&#xf3be;</i>
-      </div>
+      </form>
 
       <ul class="list-ul"></ul>
       <p class="clear">Clear all completed</p>
-    </div>
+    </section>
   </body>
 </html>
