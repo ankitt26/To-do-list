@@ -3,10 +3,8 @@
 .todo-list {
   border: 2px solid rgb(189, 184, 184);
   border-radius: 5px;
-  box-shadow:
-    0 -28px 20px -20px rgba(0, 0, 0, 0.45),
-    25px 0 20px -20px rgba(0, 0, 0, 0.45),
-    0 25px 20px -20px rgba(0, 0, 0, 0.45),
+  box-shadow: 0 -28px 20px -20px rgba(0, 0, 0, 0.45),
+    25px 0 20px -20px rgba(0, 0, 0, 0.45), 0 25px 20px -20px rgba(0, 0, 0, 0.45),
     -25px 0 20px -20px rgba(0, 0, 0, 0.45);
   margin: 100px auto;
   max-width: 600px;
@@ -50,6 +48,11 @@ h3 {
   color: rgb(163, 191, 191);
   font-size: 20px;
   font-weight: 700;
+}
+
+.checkbok {
+  width: 25px;
+  height: 25px;
 }
 
 .clear {
