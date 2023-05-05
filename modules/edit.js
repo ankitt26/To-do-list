@@ -2,12 +2,13 @@ export default (tasklist) => {
   const listul = document.querySelector('.list-ul');
   listul.addEventListener('click', (event) => {
     if (event.target.classList.contains('description')) {
-      const listid = parseInt(event.target.id, 12);
+      const listid = event.target.id;
       const edittask = document.getElementById(listid);
       edittask.setAttribute('contenteditable', 'true');
 
       tasklist.forEach((value) => {
-        if (value.index === listid) {
+        const taskId = `desc${value.index}`;
+        if (taskId === listid) {
           value.description = edittask.innerText;
         }
       });

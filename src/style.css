@@ -52,6 +52,16 @@ h3 {
   font-weight: 700;
 }
 
+.checkbok {
+  width: 25px;
+  height: 25px;
+}
+
+.checked {
+  text-decoration: line-through;
+  text-decoration-color: red;
+}
+
 .clear {
   font-size: 23px;
   font-weight: 800;

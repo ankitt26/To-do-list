@@ -1,3 +1,4 @@
+import { checkCompleted } from './completelist.js';
 import render from './render.js';
 
 export default (tasklist) => {
@@ -5,8 +6,12 @@ export default (tasklist) => {
 
   listul.addEventListener('click', (event) => {
     if (event.target.classList.contains('fa')) {
-      const listid = parseInt(event.target.id, 12);
-      tasklist = tasklist.filter((value) => value.index !== listid);
+      const faId = event.target.id;
+
+      tasklist = tasklist.filter((value) => {
+        const taskId = `fa${value.index}`;
+        return faId !== taskId;
+      });
 
       // to reassign the index
       tasklist.forEach((value, indd) => {
@@ -16,6 +21,7 @@ export default (tasklist) => {
       const toString = JSON.stringify(tasklist);
       localStorage.setItem('tasklist', toString);
       render(tasklist);
+      checkCompleted(tasklist);
     }
   });
 };

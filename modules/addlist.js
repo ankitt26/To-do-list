@@ -1,3 +1,4 @@
+import { checkCompleted } from './completelist.js';
 import render from './render.js';
 
 export default (tasklist) => {
@@ -20,6 +21,7 @@ export default (tasklist) => {
       event.preventDefault();
       AddList.value = '';
       render(tasklist);
+      checkCompleted(tasklist);
     }
   });
 
@@ -38,6 +40,7 @@ export default (tasklist) => {
         event.preventDefault();
         AddList.value = '';
         render(tasklist);
+        checkCompleted(tasklist);
       }
     }
   });
