@@ -6,20 +6,13 @@ import clearall from '../modules/clearall.js';
 import edit from '../modules/edit.js';
 import { checkCompleted, updateCheck } from '../modules/completelist.js';
 
-let tasklist;
-if (localStorage.getItem('tasklist')) {
-  tasklist = JSON.parse(localStorage.getItem('tasklist'));
-} else {
-  tasklist = [];
-}
-
-addlist(tasklist);
-removelist(tasklist);
-render(tasklist);
-clearall(tasklist);
-edit(tasklist);
-checkCompleted(tasklist);
-updateCheck(tasklist);
+addlist();
+removelist();
+render();
+clearall();
+edit();
+checkCompleted();
+updateCheck();
 
 const refresh = document.querySelector('.fa-arrows-rotate');
 refresh.addEventListener('click', () => {
