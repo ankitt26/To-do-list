@@ -1,4 +1,7 @@
-export default (tasklist) => {
+import fetchLocal from './fetchLocal.js';
+
+export default () => {
+  const tasklist = fetchLocal();
   const ul = document.querySelector('.list-ul');
   const sortIndex = tasklist.sort((a, b) => a.index - b.index);
   ul.innerHTML = '';

@@ -1,10 +1,12 @@
 import { checkCompleted } from './completelist.js';
+import fetchLocal from './fetchLocal.js';
 import render from './render.js';
 
-export default (tasklist) => {
+export default () => {
   const listul = document.querySelector('.list-ul');
 
   listul.addEventListener('click', (event) => {
+    let tasklist = fetchLocal();
     if (event.target.classList.contains('fa')) {
       const faId = event.target.id;
 

@@ -1,10 +1,15 @@
-export default (tasklist) => {
+import fetchLocal from './fetchLocal.js';
+
+export default () => {
   const listul = document.querySelector('.list-ul');
-  listul.addEventListener('click', (event) => {
+  let tasklist;
+  listul.addEventListener('keydown', (event) => {
+    tasklist = fetchLocal();
+
     if (event.target.classList.contains('description')) {
       const listid = event.target.id;
       const edittask = document.getElementById(listid);
-      edittask.setAttribute('contenteditable', 'true');
+      // edittask.setAttribute("contenteditable", "true");
 
       tasklist.forEach((value) => {
         const taskId = `desc${value.index}`;
